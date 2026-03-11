@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            CurrentWorkDay workDay = new CurrentWorkDay();
+
+            ConsoleUI consoleUI = new ConsoleUI();
+            consoleUI.StartUI(workDay);
         }
     }
 }
