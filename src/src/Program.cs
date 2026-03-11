@@ -8,6 +8,7 @@
 
             ConsoleUI consoleUI = new ConsoleUI();
             consoleUI.StartUI(workDay);
+            Console.WriteLine("Test");
         }
     }
 }
