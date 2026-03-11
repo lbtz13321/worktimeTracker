@@ -1,0 +1,8 @@
+@startuml UserCaseDiagram
+
+:User: --> (Start shift)
+:User: --> (End shift)
+:User: --> (Check weekly overview)
+:User: --> (activate auto track break times)
+
+@enduml

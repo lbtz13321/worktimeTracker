@@ -1,0 +1,11 @@
+@startuml ClassDiagram
+
+class CurrentWorkDay {
+    TimeStamp startTime
+    TimeStamp endTime
+    double pauseDuration
+    void StartShift()
+    void EndShift()
+}
+
+@enduml
