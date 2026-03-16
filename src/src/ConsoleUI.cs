@@ -14,7 +14,7 @@ namespace src
 
         public void StartUI()
         {
-            Console.WriteLine("Möchten Sie die Arbeit beginnen? y/n");
+            Console.WriteLine("Möchten Sie die Arbeit beginnen? y");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
                 Console.Clear();
@@ -28,12 +28,14 @@ namespace src
                 while (true)
                 {
                     Console.SetCursorPosition(0, 0);
-                    Console.Write($"Arbeitszeit: {stopwatch.Elapsed}");
-                    Thread.Sleep(100);
+                    TimeSpan totalSecondsElapsed = TimeSpan.FromSeconds(Convert.ToInt32(stopwatch.Elapsed.TotalSeconds));
+                    Console.Write(totalSecondsElapsed.ToString("c"));
+                    Console.Write('\r');
+                    Thread.Sleep(1000);
                 }
             });
             Console.SetCursorPosition(0, 1);
-            Console.WriteLine("Möchten Sie die Arbeit beenden? y/n");
+            Console.WriteLine("Möchten Sie die Arbeit beenden? y");
             if (Console.ReadKey().Key == ConsoleKey.Y)
             {
                 Console.Clear();
@@ -49,17 +51,11 @@ namespace src
 
         public void SetEndTime()
         {
-            Console.Clear();
+            stopwatch.Stop();
             workDay.EndTime = TimeOnly.FromDateTime(DateTime.Now);
+            workDay.CurrentTime = stopwatch.Elapsed;
             Console.WriteLine($"Deine Arbeitszeit endete um: {workDay.EndTime}.");
-            Console.WriteLine($"Die Arbeitszeit betrug: {stopwatch}");
-            // CalWorkDuration(workDay);
+            Console.WriteLine($"Die Arbeitszeit betrug: {workDay.CurrentTime}");
         }
-
-        //public void CalWorkDuration(CurrentWorkDay workDay)
-        //{
-        //    workDay.CalculateWorkDuration(workDay.StartTime, workDay.EndTime);
-        //    Console.WriteLine($"Arbeitszeit beträgt: {workDay.WorkDuration}");
-        //}
     }
 }
