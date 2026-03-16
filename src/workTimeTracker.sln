@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36908.2 d17.14
+VisualStudioVersion = 17.14.36908.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src", "src\src.csproj", "{C0F51000-EA1C-4C78-BA5C-A09C318B1471}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "workTimeTracker", "src\workTimeTracker.csproj", "{C0F51000-EA1C-4C78-BA5C-A09C318B1471}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
