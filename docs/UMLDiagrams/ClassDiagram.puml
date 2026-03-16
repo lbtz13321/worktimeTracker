@@ -7,5 +7,10 @@ class CurrentWorkDay {
     void StartShift()
     void EndShift()
 }
+class ConsoleUI{
+   CurrentWorkDay workDay
+   Stopwatch stopwatch
+    
+}
 
 @enduml

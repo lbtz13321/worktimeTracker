@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,8 +28,8 @@ namespace workTimeTracker
 
         public TimeSpan CalculateWorkDuration(TimeOnly startTime, TimeOnly endTime)
         {
-                WorkDuration = endTime - startTime;
-                return WorkDuration;
+            WorkDuration = endTime - startTime;
+            return WorkDuration;
         }
     }
 }
