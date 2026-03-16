@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace src
+namespace workTimeTracker
 {
     public class CurrentWorkDay
     {
