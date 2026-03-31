@@ -1,6 +1,3 @@
-<<<<<<<< HEAD:src/WorktimeLibrary/CurrentWorkDay.cs
-﻿namespace WorktimeLibrary
-========
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace workTimeTracker
->>>>>>>> origin/main:src/workTimeTracker/CurrentWorkDay.cs
 {
     public class CurrentWorkDay
     {
