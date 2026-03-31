@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace src
+﻿namespace WorktimeLibrary
 {
     public class CurrentWorkDay
     {
@@ -22,12 +15,6 @@ namespace src
             _startTime = StartTime;
             _endTime = EndTime;
             _workDuration = WorkDuration;
-        }
-
-        public TimeSpan CalculateWorkDuration(TimeOnly startTime, TimeOnly endTime)
-        {
-            WorkDuration = endTime - startTime;
-            return WorkDuration;
         }
     }
 }
