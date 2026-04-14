@@ -5,6 +5,12 @@
 
 <h3>Work time</h3>
 
+<p role="status">Current time: @TimeOnly.FromDateTime(DateTime.Now)</p>
+
+<button class="btn btn-primary" @onclick="StartDay">Start day</button>
+
+<p role="status">Start time: @workDay.StartTime</p>
+
 <p role="status">Current time: @currentTime</p>
 
 <button class="btn btn-primary" @onclick="StartDay">Start day</button>
