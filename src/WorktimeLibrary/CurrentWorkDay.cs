@@ -11,12 +11,12 @@ namespace workTimeTracker
         private TimeOnly _startTime;
         private TimeOnly _endTime;
         private TimeSpan _workDuration;
-        private TimeSpan _currentTime;
+        private TimeOnly _currentTime;
 
         public TimeOnly StartTime { get; set; }
         public TimeOnly EndTime { get; set; }
         public TimeSpan WorkDuration { get; private set; }
-        public TimeSpan CurrentTime { get; set; }
+        public TimeOnly CurrentTime { get; set; }
 
         public CurrentWorkDay()
         {
