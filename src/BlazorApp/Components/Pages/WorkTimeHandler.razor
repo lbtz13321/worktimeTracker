@@ -1,21 +1,31 @@
 ﻿@page "/worktime"
-@using workTimeTracker
 @rendermode InteractiveServer
+@using workTimeTracker
+@using System.Threading
 
 <h3>Work time</h3>
 
-<p role="status">Current time: @TimeOnly.FromDateTime(DateTime.Now)</p>
+<p role="status">Current time: @currentTime</p>
 
 <button class="btn btn-primary" @onclick="StartDay">Start day</button>
 
 <p role="status">Start time: @workDay.StartTime</p>
-
+    
 @code {
     CurrentWorkDay workDay = new CurrentWorkDay();
 
-    private void CurrentTime()
+    string currentTime;
+    Timer CurrentTimer;
+
+    protected override void OnInitialized()
     {
-        workDay.CurrentTime = TimeOnly.FromDateTime(DateTime.Now);
+        CurrentTimer = new Timer(Tick, null, 0, 1000);
+    }
+
+    private void Tick(object _)
+    {
+        currentTime = DateTime.Now.ToLongTimeString();
+        InvokeAsync(StateHasChanged);
     }
 
     private void StartDay()
